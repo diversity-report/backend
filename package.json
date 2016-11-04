@@ -1,0 +1,39 @@
+{
+  "name": "diversity-report-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diversity-report/backend.git"
+  },
+  "author": "Aliza Pilisuk",
+  "contributors": [
+    {
+      "name": "Sawako Ishida"
+    },
+    {
+      "name": "Yun Joo Kim"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diversity-report/backend/issues"
+  },
+  "homepage": "https://github.com/diversity-report/backend#readme",
+  "devDependencies": {
+    "debug": "^2.2.0",
+    "morgan": "^1.7.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.6",
+    "morgan": "^1.7.0"
+  }
+}
