@@ -3,7 +3,7 @@
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
-const serverError = require('debug')('rxsms:error');
+const serverError = require('debug')('diversity-report:error');
 const mongoose = require('mongoose');
 const Promise = require('./lib/promise');
 mongoose.Promise = Promise;
