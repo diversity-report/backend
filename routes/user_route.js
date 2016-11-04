@@ -24,7 +24,7 @@ userRouter.get('/', function(req, res) {
 });
 
 //GET all user data with a specific companyId.
-userRouter.get('/company/:companyId', function(req, res, next) {
+userRouter.get('/:companyId', function(req, res, next) {
   let DBError = HandleError(400, next, 'invalid company id');
   let Err404 = HandleError(404, next);
   UserSchema.find({'companyId': req.params.companyId}).then((data) => {
