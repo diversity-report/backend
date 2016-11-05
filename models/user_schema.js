@@ -13,11 +13,21 @@ const userSchema = new mongoose.Schema({
   jobTitle: {
     type: String
   },
-  genderIdentity: {
-    type: String
+  gender: {
+    type: String,
+    required: true
   },
   race: {
-    type: String
+    type: String,
+    required: true
+  },
+  veteran: {
+    type: Boolean,
+    required: true
+  },
+  dependants: {
+    type: Boolean,
+    required: true
   }
 });
 
