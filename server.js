@@ -9,11 +9,9 @@ const Promise = require('./lib/promise');
 mongoose.Promise = Promise;
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/dev');
 const companyRoute = require('./routes/company_route');
-const userRoute = require('./routes/user_route');
 
 app.use(morgan('dev'));
 app.use('/api/company', companyRoute);
-app.use('/api/user', userRoute);
 
 app.use((err, req, res, next) => {
   serverError(err);
