@@ -7,8 +7,7 @@ const HandleError = require('../controller/error_handler');
 
 let userRouter = module.exports = exports = Router();
 
-//POST a new user associated with a company ID that already exists. Getting res.json data back, but it's not saving to the db.
-//TODO fix bug to save user info to DB. Need this for GET requests to work.
+//POST a new user associated with a company ID that already exists.
 userRouter.post('/newUser', jsonParser, function(req, res, next) {
   let newUser = new UserSchema({'companyId': req.body.companyId, 'department': req.body.department, 'jobTitle': req.body.jobTitle, 'gender': req.body.gender, 'race': req.body.race, 'veteran': req.body.veteran, 'dependants': req.body.dependants});
   newUser.save();
@@ -18,7 +17,7 @@ userRouter.post('/newUser', jsonParser, function(req, res, next) {
 
 //GET all user data
 userRouter.get('/', function(req, res) {
-  UserSchema.find().then((data) => {
+  UserSchema.find({}).then((data) => {
     res.json(data);
   });
 });
