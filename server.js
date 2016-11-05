@@ -6,10 +6,12 @@ const morgan = require('morgan');
 const serverError = require('debug')('diversity-report:error');
 const mongoose = require('mongoose');
 const Promise = require('./lib/promise');
+const cors = require('cors');
 mongoose.Promise = Promise;
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/dev');
 const companyRoute = require('./routes/company_route');
 
+app.use(cors());
 app.use(morgan('dev'));
 app.use('/api/company', companyRoute);
 
