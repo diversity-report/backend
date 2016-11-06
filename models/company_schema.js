@@ -11,9 +11,9 @@ const companySchema = mongoose.Schema({
     female: { type: Number },
     male: { type: Number },
     nonbinary: { type: Number },
-    unreported: { type: Number }
+    unreportedGender: { type: Number }
   },
-  race: { 
+  race: {
     arabMiddleEastern: { type: Number },
     latinoHispanic: { type: Number },
     blackAfricanAmerican: { type: Number },
@@ -21,7 +21,7 @@ const companySchema = mongoose.Schema({
     nativeAmericanAlaskanNative: { type: Number },
     nativeHawaiianPacificIslander: { type: Number },
     whiteCaucasian: { type: Number },
-    unreported: { type: Number }
+    unreportedRace: { type: Number }
   },
   veteran: { type: Number },
   dependants: { type: Number }
