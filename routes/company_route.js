@@ -1,5 +1,5 @@
 'use strict';
-
+const debug = require('debug')('drApp:company_route');
 const Router = require('express').Router;
 const CompanySchema = require('../models/company_schema');
 const jsonParser = require('body-parser').json();
@@ -9,7 +9,9 @@ let companyRouter = module.exports = exports = Router();
 
 //POST a new company
 companyRouter.post('/newCompany', jsonParser, function(req, res, next) {
-  let newCompany = new CompanySchema({'companyName': req.body.companyName, 'city': req.body.city, 'state': req.body.state});
+  debug('hitting post /newCompany');
+  debug(req.body);
+  let newCompany = new CompanySchema(req.body);
   newCompany.save();
   res.json(newCompany);
   next();
