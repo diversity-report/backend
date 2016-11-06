@@ -16,6 +16,10 @@ const companySchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  numOfEmployees: {
+    type: Number,
+    required: true
+  },
   gender: {
     female: {
       type: Number,
